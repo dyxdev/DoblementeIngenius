@@ -70,8 +70,8 @@ Public Class DataAccess
         Try
             connection.Open()
         Catch ex As SqlException
-            ' Handle connection string errors
-            If ex.Message.Contains("Login failed for user") Then  ' Example check for login error
+            ' Handle connection string if no pass builder errors
+            If ex.Message.Contains("Login failed for user") Then
                 Throw New Exception("Incorrect username or password!")
             End If
             Throw New Exception("Connection string error: " & ex.Message)

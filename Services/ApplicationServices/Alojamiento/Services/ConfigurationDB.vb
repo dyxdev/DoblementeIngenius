@@ -6,22 +6,22 @@ Public Class ConfigurationDB
 
         If String.IsNullOrEmpty(server) And
             Not StringValidations.HasNoWhitespace(server) Then
-            Throw New ArgumentException("Invalid server name")
+            Throw New ArgumentException(Messages.ServerError)
         End If
 
         If String.IsNullOrEmpty(dbName) And
             Not StringValidations.HasNoWhitespace(dbName) Then
-            Throw New ArgumentException("invalid database")
+            Throw New ArgumentException(Messages.DataBaseError)
         End If
 
         If String.IsNullOrEmpty(user) And
             Not StringValidations.HasNoWhitespace(user) Then
-            Throw New ArgumentException("Invalid user")
+            Throw New ArgumentException(Messages.UserError)
         End If
 
         If String.IsNullOrEmpty(pass) And
             Not StringValidations.HasNoWhitespace(pass) Then
-            Throw New ArgumentException("Invalid password")
+            Throw New ArgumentException(Messages.PasswordError)
         End If
 
         Try
