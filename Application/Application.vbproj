@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Application</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ApplicationServices\Alojamiento\Map\" />
+    <Folder Include="ApplicationServices\Alojamiento\Validators\" />
+    <Folder Include="ApplicationServices\Alojamiento\Services\" />
+  </ItemGroup>
+
+</Project>
